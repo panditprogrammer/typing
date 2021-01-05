@@ -184,6 +184,7 @@ body{
   #result{
       width: 100%;
       margin: auto;
+      padding: 10px;
   }
 
   .code{
