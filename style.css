@@ -2,9 +2,10 @@ body{
   height: 100%;
   width: 100%;
   min-width: 420px;
-  margin: 0px;
+  max-width: 1300px;
+  margin: auto;
   padding: 0px;
-  background: linear-gradient(30deg, #f59414 ,#55b6f7 60%) no-repeat;
+  background: linear-gradient(15deg, #f59414 ,#55b6f7 80%) ;
   
 }
 
@@ -135,6 +136,7 @@ header nav a:hover i{
   font-weight: 700;
   letter-spacing: 0.5px;
   display: inline;
+  text-shadow: 0 20px 25px rgb(15, 120, 167, 30%);
 }
 
 .typing-menu{
