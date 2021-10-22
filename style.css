@@ -1,24 +1,70 @@
 body{
-  height: 100vh;
+  height: 100%;
   width: 100%;
-  min-width: 435px;
+  min-width: 420px;
   margin: 0px;
   padding: 0px;
-  background: linear-gradient(20deg, #f59414 ,#55b6f7 60%) no-repeat;
+  background: linear-gradient(30deg, #f59414 ,#55b6f7 60%) no-repeat;
   
 }
 
-.heading{
+header{
+  width: 80%;
+  height: 60px;
+  margin: auto;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  box-shadow: 0px 10px 20px 0px rgb(0, 0, 0, 20%);
+  border-radius: 5px;
+}
+
+header nav{
+  width: 200px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+header nav a{
+  padding: 5px 10px;
+  text-decoration: none;
+  color: white;
+  text-transform: capitalize;
+  font-size: 16px;
+}
+
+header nav a i{
+  transition: all 0.5s;
+  
+}
+
+header nav a:hover i{
+  transform: scale(1.2);
+}
+
+.heading1{
+  margin: 5px auto;
   text-align: center;
-  font-family: cursive;
+  font-family: 'ubuntu';
+  font-size: 2rem;
   color: rgb(255, 255, 255);
 }
+
+.heading4{
+  margin: 5px auto;
+  text-align: center;
+  font-family: cursive;
+  font-size: 1rem;
+  color: rgb(255, 255, 255);
+}
+
 .container{
   position: relative;
   background: transparent;
   width:80%;
   margin: 20px auto;
-  border-radius: 20px;
+  border-radius: 10px;
   box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 20%);
   
 }
@@ -43,8 +89,9 @@ body{
   width: 50%;
   padding: 5px 20px;
   font-size: 18px;
+  font-family: 'Poppins', sans-serif;
   font-weight: 600;
-  font-family: Helvetica, sans-serif;
+  letter-spacing: 1px;
   outline: none;
   color:#000000;
   background-color: transparent;
@@ -54,7 +101,7 @@ body{
 }
 
 .typed{
-  font-size: 20px;
+  font-size: 1.1rem;
   font-family:  sans-serif;
   font-weight: bold;
   color:#000000;
@@ -83,9 +130,10 @@ body{
 }
 
 .text-1{
-  font-size: 26px;
-  font-family:  sans-serif;
-  font-weight: bold;
+  font-size: 1.4rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.5px;
   display: inline;
 }
 
@@ -121,7 +169,7 @@ body{
 
 #cWord{
   padding: 2px;
-  background-color: skyblue;
+  background: #7cc2f1;
   border-style: none;
   border-radius: 3px;
 }
@@ -221,4 +269,44 @@ body{
 #start_btn:hover{
   background-color: transparent;
   color: green;
+}
+
+footer{
+  width: 80%;
+  padding: 20px 0px;
+  margin: auto;
+  text-align: center;
+}
+  
+
+footer a{
+  color: black;
+  text-decoration: none;
+
+}
+
+footer a:hover{
+  color: gray;
+
+}
+
+@media screen and (max-width: 768px){
+  .heading1{
+    font-size: 1.2rem;
+  }
+  .heading4{
+    font-size: 0.7rem;
+  }
+  .text-1{
+    font-size: 1rem;
+  }
+
+  #typing-area{
+    width: 80%;
+  }
+  footer{
+  font-size: 12px;
+
+  }
+
 }
