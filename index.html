@@ -5,17 +5,14 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <meta name="description"
-    content="One Minute Typing Test Website for students. Improve your typing speed by panditprogrammer.com Check Your typing test in one . Tracking Accuracy of Your typing speed realtime. Create website using javascript for typing test on web by panditprogrammer.com, panditprogrammer typing test website. typing test website by panditprogrammer.com, typing website for accuracy check by panditprogrammer">
+    content="Typing Test website for checking your typing speed. This Typing Test Website for students to speed up their typing skill.  Improve your typing speed by panditprogrammer.com Check Your typing test in 5 minutes. Tracking Accuracy of Your typing speed realtime. Create website using javascript for typing test on web by panditprogrammer.com, panditprogrammer typing test website. typing test website by panditprogrammer.com, typing website for accuracy check by panditprogrammer">
   <meta name="keywords"
     content="Typing Website , typing game,typing test in one minute, Pandit programmer typing test. Typing accuracy ,check your typing speed., accuracy of typing , typing test website,panditprogrammer typing website, panditprogrammer typing test, pandit programmer typing ">
   <title>Typing Test - Pandit Programmer</title>
   <!-- fontawesome  -->
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-  <!-- materials icon  -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <!-- google font  -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Ubuntu&display=swap" rel="stylesheet">
+
 
   <link rel="stylesheet" href="style.css">
 
@@ -42,17 +39,30 @@
 
 <body>
   <header>
+    <div class="logo">Typing</div>
     <nav>
-      <a href="index.html" title="Home"><i class="material-icons">home</i></a>
-      <a href="index.html" title="Restart"><i class="material-icons">restart_alt</i></a>
+      <a href="index.html" class="nav_item" title="Home"><i class="fas fa-home"></i></a>
+      <span class="nav_item" title="Restart" id="restart"><i class="fas fa-redo"></i></span>
+      <span class="nav_item" title="Timer"><i class="far fa-clock">
+          <select name="time" id="time_select">
+            <option value="1">1:00 Min</option>
+            <option value="2">2:00 Min</option>
+            <option value="5">5:00 Min</option>
+            <option value="10">10:00 Min</option>
+            <option value="30">30:00 Min</option>
+          </select>
+        </i></span>
+      <span class="nav_item" title="Stop Timer" id="stop_timer"><i class="fas fa-power-off"></i></a>
     </nav>
   </header>
+
+
   <h1 class="heading1">Typing Test : Test Your Typing Speed</h1>
-  <h4 class="heading4">1 Minute Round</h4>
+  <h4 class="heading4">Challange Yourself</h4>
   <div class="container">
     <div id="container">
 
-      <div class="inner-container">
+      <div class="inner-container " >
         <p class="text-1" id="cWord"></p>
         <p id="text-text" class="text-1"></p>
       </div>
@@ -77,7 +87,7 @@
       <h1 id="and">And</h1>
       <h1 id="acc">Accuracy is</h1>
       <h1 id="accuracy"></h1>
-      <a href="index.html" id="start_btn">RESTART</a>
+      <a href="index.html" class="nav_item" id="start_btn">RESTART</a>
     </div>
 
   </div>
