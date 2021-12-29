@@ -5,7 +5,7 @@ var timeArea = document.getElementById('score');
 var textContainer = document.getElementById('text-text');
 var resultCont = document.getElementById('result');
 var wpm = document.getElementById('wordpm');
-var accuracy = document.getElementById("accuracy");
+// var accuracy = document.getElementById("accuracy");
 var cont = document.getElementById('container');
 var tWords = document.getElementById('tTyped');
 var cWord = document.getElementById('cWord');
@@ -33,36 +33,51 @@ typeArea.addEventListener('click', timer);
 restart.addEventListener('click', () => {
 
   if (restart_check) {
-    console.log(restart_check);
+    
     clearInterval(time);
     oneTimeClick = true;
     currentWord = 0;
     updateText(currentWord);
-    timeArea.textContent = "Ready To Start";
-    tWords.textContent = 0;
-    correct.textContent = 0;
-    wrong.textContent = 0;
+    timeArea.innerText = "Ready To Start";
+    tWords.innerText = 0;
+    correct.innerText = 0;
+    wrong.innerText = 0;
 
   }
 
 });
 
 
+
 stop_get_result.addEventListener('click', () => {
 
   oneTimeClick = true;
   clearInterval(time);
-  timeArea.textContent = "Result!";
+  timeArea.innerText = "Result!";
   cont.style.display = "none";
   resultCont.style.display = "block";
-  wpm.textContent = currentWord;
+  wpm.innerText = currentWord;
 
-  if (calculateAccuracy(correctWords, currentWord) === "NaN%")
-    accuracy.textContent = "0%";
-  else
-    accuracy.textContent = calculateAccuracy(correctWords, currentWord);
+  if (currentWord === 0) {
+    accuracy.innerText = "0%";
 
+  } else {
 
+    
+    let final_accuray = calculateAccuracy(correctWords, currentWord);
+
+    if (final_accuray === "NaN") {
+      accuracy.innerText = "0%";
+    }
+    else if (final_accuray >= 95) {
+      accuracy.innerText = final_accuray + "%";
+      accuracy.style.backgroundColor = "green";
+    }
+    else {
+      accuracy.innerText = final_accuray + "%";
+    }
+
+  }
 
 });
 
@@ -75,20 +90,34 @@ function timer() {
     restart_check = true;
 
     time = setInterval(function () {
-      timeArea.textContent = seconds;
+      timeArea.innerText = seconds;
 
       if (seconds == 0) {
         oneTimeClick = true;
         clearInterval(time);
-        timeArea.textContent = "Result!";
+        timeArea.innerText = "Result!";
         cont.style.display = "none";
         resultCont.style.display = "block";
-        wpm.textContent = currentWord;
+        wpm.innerText = currentWord;
 
-        if (calculateAccuracy(correctWords, currentWord) === "NaN%")
-          accuracy.textContent = "0%";
-        else
-          accuracy.textContent = calculateAccuracy(correctWords, currentWord);
+        if (currentWord === 0) {
+          accuracy.innerText = "0%";
+
+        } else {
+
+          let final_accuray = calculateAccuracy(correctWords, currentWord);
+
+          if (final_accuray === "NaN") {
+            accuracy.innerText = "0%";
+          }
+          else if (final_accuray >= 95) {
+            accuracy.innerText = final_accuray + "%";
+            accuracy.style.backgroundColor = "green";
+          }
+          else {
+            accuracy.innerText = final_accuray + "%";
+          }
+        }
 
       }
 
@@ -105,10 +134,10 @@ updateText(currentWord);
 
 
 function updateText(start) {
-  textContainer.textContent = "";
-  cWord.textContent = typingParagraph[0].split(" ")[start];
+  textContainer.innerText = "";
+  cWord.innerText = typingParagraph[0].split(" ")[start];
   for (var i = start + 1; i < start + 19; i++) {
-    textContainer.textContent += " " + typingParagraph[0].split(' ')[i];
+    textContainer.innerText += " " + typingParagraph[0].split(' ')[i];
   }
 }
 
@@ -129,17 +158,17 @@ function variefy(val) {
   if (val == typingParagraph[0].split(' ')[currentWord]) {
     currentWord++;
     correctWords++;
-    correct.textContent = correctWords;
-    wrong.textContent = wrongWords;
-    tWords.textContent = currentWord;
+    correct.innerText = correctWords;
+    wrong.innerText = wrongWords;
+    tWords.innerText = currentWord;
     updateText(currentWord);
   }
   else {
     currentWord++;
     wrongWords++;
-    correct.textContent = correctWords;
-    wrong.textContent = wrongWords;
-    tWords.textContent = currentWord;
+    correct.innerText = correctWords;
+    wrong.innerText = wrongWords;
+    tWords.innerText = currentWord;
     updateText(currentWord);
   }
 }
@@ -147,7 +176,7 @@ function variefy(val) {
 
 function calculateAccuracy(c, d) {
   var acc = (c / d);
-  acc = Math.ceil((acc * 100)) + "%";
+  acc = Math.ceil((acc * 100));
   return acc;
 }
 

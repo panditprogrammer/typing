@@ -9,12 +9,10 @@
   <meta name="keywords"
     content="Typing Website , typing game,typing test in one minute, Pandit programmer typing test. Typing accuracy ,check your typing speed., accuracy of typing , typing test website,panditprogrammer typing website, panditprogrammer typing test, pandit programmer typing ">
   <title>Typing Test - Pandit Programmer</title>
+  <link rel="stylesheet" href="style.css">
   <!-- fontawesome  -->
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-
-
-  <link rel="stylesheet" href="style.css">
 
   <!-- favicons  -->
   <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
@@ -39,30 +37,35 @@
 
 <body>
   <header>
-    <div class="logo">Typing</div>
-    <nav>
-      <a href="index.html" class="nav_item" title="Home"><i class="fas fa-home"></i></a>
-      <span class="nav_item" title="Restart" id="restart"><i class="fas fa-redo"></i></span>
-      <span class="nav_item" title="Timer"><i class="far fa-clock">
-          <select name="time" id="time_select">
-            <option value="1">1:00 Min</option>
-            <option value="2">2:00 Min</option>
-            <option value="5">5:00 Min</option>
-            <option value="10">10:00 Min</option>
-            <option value="30">30:00 Min</option>
-          </select>
-        </i></span>
-      <span class="nav_item" title="Stop Timer" id="stop_timer"><i class="fas fa-power-off"></i></a>
-    </nav>
+
+    <div class="header_container">
+      <div class="logo">Typing</div>
+      <nav>
+        <a href="index.html" class="nav_item" title="Home"><i class="fas fa-home"></i></a>
+        <span class="nav_item" title="Restart" id="restart"><i class="fas fa-redo"></i></span>
+        <span class="nav_item" title="Timer"><i class="far fa-clock">
+            <select name="time" id="time_select">
+              <option value="1">1:00 Min</option>
+              <option value="2">2:00 Min</option>
+              <option value="5">5:00 Min</option>
+              <option value="10">10:00 Min</option>
+              <option value="30">30:00 Min</option>
+            </select>
+          </i></span>
+        <span class="nav_item" title="Stop Timer" id="stop_timer"><i class="fas fa-power-off"></i></a>
+      </nav>
+
+    </div>
   </header>
 
 
   <h1 class="heading1">Typing Test : Test Your Typing Speed</h1>
   <h4 class="heading4">Challange Yourself</h4>
+
   <div class="container">
     <div id="container">
 
-      <div class="inner-container " >
+      <div class="inner-container ">
         <p class="text-1" id="cWord"></p>
         <p id="text-text" class="text-1"></p>
       </div>
@@ -70,9 +73,9 @@
         <input type="text" placeholder="Type here to start" id="typing-area" autocomplete="off">
       </div>
       <div class="inner-container" id="dispi">
-        <h1 class="typed">Typed Words : <span id="tTyped">0</span></h1>
-        <h1 class="typed">Correct Words : <span id="correct">0</span></h1>
-        <h1 class="typed">Wrong Words : <span id="wrong">0</span></h1>
+        <p class="typed">Typed Words <span id="tTyped">0</span></p>
+        <p class="typed">Correct Words <span id="correct">0</span></p>
+        <p class="typed">Wrong Words <span id="wrong">0</span></p>
 
       </div>
       <h1 id="score">Start!</h1>
@@ -92,10 +95,15 @@
 
   </div>
 
+
+
   <footer>
-    <span>&copy; All Rights are reserved by <a href="http://panditprogrammer.com"
-        target="blank">PanditProgrammer.com</a> 2019-21.</span> <br>
-    <span> Developed by <a href="http://panditprogrammer.com">Pandit Programmer</a> </span>
+    <div class="footer">
+      <span>&copy; All Rights are reserved by <a href="http://panditprogrammer.com"
+          target="blank">PanditProgrammer.com</a> 2019-21.
+        </span>
+      <span> Developed by <a href="http://panditprogrammer.com">Pandit Programmer</a> </span>
+    </div>
   </footer>
 </body>
 <script src="index.js"></script>
