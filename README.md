@@ -1,7 +1,8 @@
-# web3 | PanditProgrammer : Typing Test
+# PanditProgrammer : Typing Test
 Typing test website using html css and javascript 
-Typing website https://panditprogrammer.github.io/web3/
+Typing website http://typing.panditprogrammer.com/
 # Test Your Typing Speed 
 
-<img width="729" alt="typing" src="https://user-images.githubusercontent.com/65272533/112955509-209bce80-915d-11eb-8680-f68b4f7123b1.PNG">
+Typing website preview
+![typing test website pandit programmer ](https://user-images.githubusercontent.com/65272533/163705268-66ad70af-313b-4a57-a231-e8ca8f811fee.png)
 
