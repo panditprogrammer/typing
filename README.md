@@ -1,6 +1,6 @@
 # PanditProgrammer : Typing Test
 Typing test website using html css and javascript 
-Typing website http://typing.panditprogrammer.com/
+Typing website https://panditprogrammer.github.io/typing
 # Test Your Typing Speed 
 
 Typing website preview
